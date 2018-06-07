@@ -12,5 +12,10 @@
                 </div>
             </div>
         </aside>
+        <div class="col-xs-8">
+            <ul class="nav nav-tabs nav-justified">
+                <li><a href="#">TaskLists</a></li>
+            </ul>
+        </div>
     </div>
 @endsection

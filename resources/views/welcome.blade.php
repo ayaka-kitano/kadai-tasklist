@@ -1,9 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-    @if (Auth::check())
-        <?php $user = Auth::user(); ?>
-        {{ $user->name }}
+     @if (Auth::check())
+        <div class="row">
+            <aside class="col-md-4">
+            </aside>
+        </div>
     @else
         <div class="center jumbotron">
             <div class="text-center">
