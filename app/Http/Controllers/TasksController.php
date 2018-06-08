@@ -85,7 +85,7 @@ class TasksController extends Controller
             ]);
             }
         }else{
-                return redirect('/');
+                return redirect('welcome');
         }
     }
 
@@ -105,7 +105,7 @@ class TasksController extends Controller
                 ]);
             }
         }else{
-            return redirect('/');
+            return redirect('welcome');
         }
     }
 
