@@ -15,7 +15,6 @@ class TasksController extends Controller
      */
     public function index()
     {
-        $data = [];
         if (\Auth::check()) {
             $user = \Auth::user();
             $tasks = $user->tasks()->paginate(10);
@@ -58,7 +57,7 @@ class TasksController extends Controller
             
         //**$task = new Task;
         //**$task->status = $request->status;
-       //** $task->content = $request->content;
+        //**$task->content = $request->content;
         //**$task->save();
         
         $request->user()->tasks()->create([
@@ -82,7 +81,7 @@ class TasksController extends Controller
         if (\Auth::check()) {
             
             if($task === null){
-            return view('welcome');
+                return view('welcome');
             }
             elseif(\Auth::user()->id === $task->user_id) {
                 return view('tasks.show', [
@@ -138,6 +137,7 @@ class TasksController extends Controller
             $task->content = $request->content;
             $task->save();
         }    
+        
         //$task = Task::find($id);
         //$task->status = $request->status;
         //$task->content = $request->content;
